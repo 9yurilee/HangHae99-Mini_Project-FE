@@ -1,10 +1,11 @@
 import React from "react";
+import Post from "../component/Post";
 
 const Main = () => {
     return (
-        <React.Fragment>
-            메인
-        </React.Fragment>
+        <>
+            <Post />
+        </>
     )
 }
 
