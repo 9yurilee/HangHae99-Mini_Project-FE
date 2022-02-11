@@ -27,8 +27,11 @@ Image.defaultProps = {
 
 const ImageDefault = styled.div`
   width: ${(props) => props.width}px;
+  min-width: 350px;
+  min-height: 300px;
   height: ${(props) => props.height}px;
-  margin: ${(props) => props.margin}px;
+  ${(props)=> props.margin ? `margin: ${props.margin}`: ""};
+  background-color: #59c1c2;
   background-image: url("${(props) => props.src}");
   background-size: contain;
   background-position: center;

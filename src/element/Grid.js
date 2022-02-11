@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Grid = (props) => {
-  const { is_flex, width, padding, margin, bg, border, children, center, _onClick} = props;
+  const { is_flex, width, padding, margin, bg, border, children, center, borderRadius, position, _onClick} = props;
   //children이 스타일을 담당하는 애가 아니라서 styles를 따로 선언..?
   const styles = {
     is_flex: is_flex,
@@ -12,6 +12,8 @@ const Grid = (props) => {
     bg: bg,
     center: center,
     border: border,
+    borderRadius,
+    position,
   };
   return(
   <div>
@@ -31,6 +33,8 @@ Grid.defaultProps = {
   bg: false,
   border: false,
   center: false,
+  borderRadius: false,
+  position: false,
   _onClick: ()=>{}
 };
 
@@ -50,6 +54,8 @@ const GridBox = styled.div`
       : ""}
   ${(props) => props.center? `text-align: center` : ""}
   ${(props)=> props.border ? `border: ${props.border}`: ""}
+  border-radius: ${(props) => props.borderRadius}px;
+  /* ${(props)=> props.position ? `position: ${props.position}`: ""}; */
 `;
 
 export default Grid;
