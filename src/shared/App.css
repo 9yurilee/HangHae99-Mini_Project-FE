@@ -1,5 +1,6 @@
 *{
-  background-color: #e3b3af;
+  background: #e3b3af;
+  z-index: 999;
   font-family: 'DungGeunMo';
 }
 
@@ -16,6 +17,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 
 .App {
   text-align: center;

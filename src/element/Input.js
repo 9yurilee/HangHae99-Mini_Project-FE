@@ -47,7 +47,7 @@ const Input = (props) => {
 Input.defaultProps = {
   multiLine: false,
   label: false,
-  placeholder: '텍스트를 입력해주세요.',
+  placeholder: '내용을 입력해주세요.',
   type: 'text',
   value: "",
   is_submit: false,
@@ -57,7 +57,7 @@ Input.defaultProps = {
 };
 
 const ElTextarea = styled.textarea`
-  border: 1px solid #212121;
+  border: none;
   width: 100%;
   padding: 12px 4px;
   box-sizing: border-box;

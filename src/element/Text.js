@@ -37,6 +37,14 @@ const Text = (props) => {
     left,right,
   };
 
+  // if (page === 'Main'){
+  //   return (
+  //     <>
+        
+  //     </>
+  //   )
+  // }
+
   return (
     <TextWrap {...styles} onClick={_onClick}>
       {text ? text : children}
@@ -56,8 +64,7 @@ Text.defaultProps = {
   display: false,
   alignItems: false,
   justifyContent: false,
-  textAlign: false,
-  float: 'left',
+  textAlign: 'left',
   bg: false,
   position: false,
 };
@@ -78,7 +85,6 @@ const TextWrap = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: break-all;
-  ${(props)=> props.position ? `position: ${props.position}`: ""};
 `;
 
 export default Text;

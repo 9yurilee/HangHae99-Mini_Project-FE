@@ -1,10 +1,11 @@
 import React from "react";
-import { Button, Grid, Image, Text } from "../element/index";
+import { Grid, Image, Text } from "../element/index";
 
 //포스트 하나당 형태
 const Post = (props) => {
   return (
     <React.Fragment>
+      메인페이지~
       <Grid>
         <Grid
           bg="#59c1c2"
