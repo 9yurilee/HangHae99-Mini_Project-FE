@@ -57,28 +57,20 @@ Grid.defaultProps = {
 };
 
 const GridBox = styled.div`
-  //props를 가져오는 것. props의 width 가져올거야
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
-  // 넓이에 패딩과 선굵기 포함할래?
   box-sizing: border-box;
-  //있을 수도 있고, 없을 수도 있는(????) 애들의 값을 설정할 때
-  // padding 있을 때 props의 패딩값을 따르고, 없으면 안준다
   ${(props) => (props.padding ? `padding: ${props.padding}` : "")}
   ${(props) => (props.margin ? `margin: ${props.margin}` : "")};
   /* ${(props) => (props.bg ? `background-color: ${props.bg}` : "")}; */
   background-color: #59c1c2;
-  //양 옆으로 흩어져있는 것 : justify-contents: space-between!
   ${(props) =>
     props.is_flex
       ? `display: flex; align-items: center; justify-content: space-evenly;`
       : ""}
-  ${(props) =>
-    props.is_write ? `display: flex; justify-content: space-evenly; ` : ""}
   ${(props) => (props.center ? `text-align: center` : "")}
   ${(props) => (props.border ? `border: ${props.border}` : "")}
   border-radius: ${(props) => props.borderRadius}px;
-  /* ${(props) => (props.position ? `position: ${props.position}` : "")}; */
-`;
+  `;
 
 export default Grid;

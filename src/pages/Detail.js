@@ -1,9 +1,11 @@
 import React from "react";
+import Header from "../component/Header";
+import Post from '../component/Post';
 
 const Detail = () => {
     return (
         <React.Fragment>
-            상세페이지
+            <Post />
         </React.Fragment>
     )
 }
