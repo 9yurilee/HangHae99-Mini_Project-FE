@@ -17,7 +17,7 @@ const Text = (props) => {
     justifyContent,
     textAlign,bg,
     position,
-    left,right,
+    left,right,paddingTop
   } = props;
 
   const styles = {
@@ -35,6 +35,8 @@ const Text = (props) => {
     bg,
     position,
     left,right,
+    paddingTop,
+  
   };
 
   // if (page === 'Main'){
@@ -67,6 +69,7 @@ Text.defaultProps = {
   textAlign: 'left',
   bg: false,
   position: false,
+  paddingTop: false,
 };
 
 const TextWrap = styled.div`
@@ -80,6 +83,7 @@ const TextWrap = styled.div`
   ${(props)=> props.position ? `position: ${props.position}`: ""};
   left: ${(props) => props.left}px;
   top: ${(props) => props.top}px;
+  ${(props)=> props.paddingTop ? `padding-top: ${props.paddingTop}`: ""};
   text-align: ${(props) => props.textAlign};
   overflow: hidden;
   text-overflow: ellipsis;
